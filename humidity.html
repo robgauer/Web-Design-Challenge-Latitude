@@ -1,0 +1,121 @@
+<!--------------------------------->
+<!-- WEB VISUALIZATION CHALLENGE -->
+<!-- Date Due May 30 2020 -->
+<!-- Author Rob Gauer -->
+<!--------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- Use bootstrap stylesheet for CSS WEB page sytles -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+   <!-- Define navigation bar --> 
+     
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand d-inline p-2 ml-5 bg-info text-white mb-0" href="./index.html"><strong>Latitude</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--<ul class="navbar-nav mr-auto"> -->
+				<ul class=" nav navbar-nav ml-auto">  
+        	<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./max_temperature.html">Max Temperature</a>
+              <a class="dropdown-item" href="./humidity.html">Humidity</a>
+              <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+              <a class="dropdown-item" href="./wind_speed.html">Wind Speed</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./index.html">Back to Home Page</a>
+            </div>
+          </li>
+					
+					<li class="nav-item active">
+            <a class="nav-link" href="./comparison.html">Comparison <span class="sr-only">(current)</span></a>
+					</li>
+					
+          <li class="nav-item">
+            <a class="nav-link" href="./data_table.html">Data</a>
+          </li>
+
+        </ul>
+                    
+      </div>
+    </nav>
+
+    <!-- Creates visualizations of main plot with description on the left of the page and selections on right of page -->   
+
+    <div class="container">
+      <section class="row">
+        <div class="col-lg-7 col-md-12">
+          <div class="plot-content">
+            <h1 class="plot-header">Humidity</h1>
+            <hr>
+            <img src="./Resources/Assets/Images/humidity_plot.png" alt="Latitude vs. Humidity" id="other-image">
+
+            <p>
+              What's the weather like as we approach the equator? Based on the sample size collected:
+              A cities latitude versus humidity does not have any real direct relationship to the equator. 
+              Though cities sampled seem to be located in areas where the humidity levels on average are at or above 60.
+            </p>
+            
+          </div>
+        </div>
+      
+        <!-- This section creates the visualization plots on the right --> 
+
+        <div class="col-lg-5 col-md-12">
+          <div class="visplot-content">
+            <h2 class="plot-header">Visualizations</h2>
+            <hr>
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-6">
+                  <a href="./max_temperature.html">
+                  <img src="./Resources/Assets/Images/temperature_plot.png"  alt="Latitude vs. Temperature" id="vis-image">
+                  </a>
+                </div>
+            
+                <div class="col-6">
+                  <a href="./humidity.html">
+                  <img src="./Resources/Assets/Images/humidity_plot.png" alt="Latitude vs. Humidity" id="vis-image">
+                  </a>
+                </div>
+            
+                <div class="col-6">
+                  <a href="./cloudiness.html">
+                  <img src="./Resources/Assets/Images/clouds_plot.png" alt="Latitude vs. Cloudiness" id="vis-image">
+                  </a>
+                </div>
+
+                <div class="col-6">
+                  <a href="./wind_speed.html">
+                  <img src="./Resources/Assets/Images/wind_plot.png" alt="Latitude vs. Wind Speed" id="vis-image">
+                  </a>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>  
+  </body>
+</html>
+<!-- EOF -->
